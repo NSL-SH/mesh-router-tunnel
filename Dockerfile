@@ -52,6 +52,7 @@ COPY --from=build /app/dist /app/dist
 # Copy the default Nginx configuration files
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 RUN rm -f /etc/nginx/conf.d/default.conf
+COPY nginx/access-log.conf /etc/nginx/conf.d/00-access-log.conf
 
 # Provider code
 COPY nginx/provider/provider.template.conf /etc/nginx/conf.d/provider.conf.template
