@@ -154,7 +154,7 @@ This ensures resilient connections without manual intervention.
 ```yaml
 services:
   mesh-router:
-    image: ghcr.io/yundera/mesh-router-tunnel:latest
+    image: ghcr.io/nsl-sh/mesh-router-tunnel:latest
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -285,7 +285,7 @@ The provider exposes an internal API on port 3000 (used by Nginx for routing):
 ```yaml
 services:
   routing:
-    image: ghcr.io/yundera/mesh-router-tunnel:latest
+    image: ghcr.io/nsl-sh/mesh-router-tunnel:latest
     ports:
       - "80:80"
       - "443:443"
